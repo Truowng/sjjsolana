@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Monomaniac One", sans-serif;
+  background-color: pink;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+header {
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+header .list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+header .list .item a {
+  font-size: 30px;
+  text-transform: capitalize;
+}
+
+.main-title {
+  font-size: 80px;
+  text-align: center;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 480px) {
+  .main-title {
+    font-size: 50px;
+  }
+}
+
+#banner .banner-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+@media only screen and (max-width: 767px) {
+  #banner .banner-wrapper {
+    flex-direction: column;
+  }
+}
+#banner .image {
+  min-width: 50%;
+}
+#banner .content {
+  font-size: 30px;
+}
+@media only screen and (max-width: 767px) {
+  #banner .content {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 480px) {
+  #banner .content {
+    font-size: 25px;
+  }
+}
+
+.image-list {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+@media only screen and (max-width: 767px) {
+  .image-list {
+    flex-wrap: wrap;
+  }
+}
+.image-list .item {
+  max-width: 150px;
+}
+
+#why {
+  margin-top: 100px;
+}
+#why .title {
+  font-size: 120px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+@media only screen and (max-width: 480px) {
+  #why .title {
+    font-size: 50px;
+  }
+}
+#why .list .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 80px;
+}
+#why .list .item .text {
+  font-size: 40px;
+  text-align: center;
+  text-transform: lowercase;
+}
+@media only screen and (max-width: 480px) {
+  #why .list .item .text {
+    font-size: 25px;
+  }
+}
+#why .list .item .images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#why .list .item .images .image {
+  width: 150px;
+}
+
+footer {
+  margin: 50px 0;
+}
+footer .list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+footer .list .item a {
+  width: 80px;
+  height: 80px;
+  display: block;
+}
+footer .list .item a svg {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap");
+
+// START BREAKPOINT VARIABLES
+@mixin extra-desktop {
+  @media (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media only screen and (max-width: 1399px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin landscape-phone {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-width: 480px) {
+    @content;
+  }
+}
+// END BREAKPOINT VARIABLES
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Monomaniac One", sans-serif;
+  background-color: pink;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+
+  &:hover {
+    color: #000;
+    text-decoration: underline;
+  }
+}
+
+header {
+  margin-bottom: 30px;
+  margin-top: 20px;
+  .list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    .item {
+      a {
+        font-size: 30px;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+
+.main-title {
+  font-size: 80px;
+  text-align: center;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  @include mobile {
+    font-size: 50px;
+  }
+}
+
+#banner {
+  .banner-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    @include landscape-phone {
+      flex-direction: column;
+    }
+  }
+  .image {
+    min-width: 50%;
+  }
+  .content {
+    font-size: 30px;
+    @include landscape-phone {
+      text-align: center;
+    }
+    @include mobile {
+      font-size: 25px;
+    }
+  }
+}
+
+.image-list {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  @include landscape-phone {
+    flex-wrap: wrap;
+  }
+  .item {
+    max-width: 150px;
+  }
+}
+
+#why {
+  margin-top: 100px;
+  .title {
+    font-size: 120px;
+    text-align: center;
+    margin-bottom: 40px;
+    @include mobile {
+      font-size: 50px;
+    }
+  }
+  .list {
+    .item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 30px;
+      margin-bottom: 80px;
+      .text {
+        font-size: 40px;
+        text-align: center;
+        text-transform: lowercase;
+        @include mobile {
+          font-size: 25px;
+        }
+      }
+      .images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        .image {
+          width: 150px;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  margin: 50px 0;
+  .list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    .item {
+      a {
+        width: 80px;
+        height: 80px;
+        display: block;
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
